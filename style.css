@@ -255,3 +255,17 @@ footer {
   color: #1e8449;
 }
 
+/* SUNDAY SCHOOL CARDS */
+.kids-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 6px solid #f39c12; /* Warm gold-orange for kids */
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.kids-card h3 {
+  margin-top: 0;
+  color: #d35400; /* Friendly orange tone */
+}
