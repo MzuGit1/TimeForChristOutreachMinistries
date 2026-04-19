@@ -400,3 +400,46 @@ footer {
   background: #0e3f23;
 }
 
+/* SERMONS PAGE */
+.sermon-player {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 6px solid #f1c40f;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.sermon-player h3 {
+  margin-top: 15px;
+  color: #145a32;
+}
+
+.sermon-playlist {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.playlist-item {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-left: 4px solid #145a32;
+  transition: 0.2s;
+}
+
+.playlist-item:hover {
+  background: #e8e8e8;
+}
+
+
