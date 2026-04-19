@@ -181,3 +181,17 @@ footer {
   }
 }
 
+/* LEADERSHIP PAGE CARDS */
+.leader-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 6px solid #145a32; /* Green */
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.leader-card h3 {
+  margin-top: 0;
+  color: #145a32;
+}
