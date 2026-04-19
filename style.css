@@ -141,4 +141,43 @@ footer {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+
+  /* Stack top navigation vertically */
+  .top-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-links {
+    margin-top: 10px;
+  }
+
+  .top-links a {
+    display: block;
+    margin: 8px 0;
+    font-size: 18px;
+  }
+
+  /* Sidebar becomes full-width on mobile */
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sidebar a {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+
+  /* Cards become full-width */
+  .info-card {
+    width: 100%;
+  }
+}
 
