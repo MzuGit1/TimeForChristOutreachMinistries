@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Sunday Service – The Power of Faith",
+    "description": "Pastor teaches on walking by faith.",
+    "url": "https://example.com/videos/sermon1.mp4",
+    "thumbnail": "https://via.placeholder.com/300x180?text=Sermon+1"
+  },
+  {
+    "title": "Midweek Teaching – Prayer That Moves Mountains",
+    "description": "A deep teaching on effective prayer.",
+    "url": "https://example.com/videos/sermon2.mp4",
+    "thumbnail": "https://via.placeholder.com/300x180?text=Sermon+2"
+  }
+]
