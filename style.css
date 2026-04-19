@@ -314,3 +314,31 @@ footer {
   object-fit: cover;
 }
 
+/* OUTREACH PAGE CARDS */
+.outreach-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 6px solid #27ae60; /* Bright green for community impact */
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.outreach-card h3 {
+  margin-top: 0;
+  color: #1e8449;
+}
+
+.volunteer-btn {
+  display: inline-block;
+  background: #145a32;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.volunteer-btn:hover {
+  background: #0e3f23;
+}
