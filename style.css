@@ -269,3 +269,48 @@ footer {
   margin-top: 0;
   color: #d35400; /* Friendly orange tone */
 }
+
+/* GALLERY SECTION */
+.gallery-section {
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.gallery-section h3 {
+  margin-top: 0;
+  color: #145a32;
+}
+
+/* VIDEO GRID */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.video-card p {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* PHOTO GRID */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.photo-grid img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
