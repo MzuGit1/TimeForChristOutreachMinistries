@@ -225,3 +225,17 @@ footer {
   background: #0e3f23;
 }
 
+/* MINISTRY PAGE CARDS */
+.ministry-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 6px solid #f1c40f; /* Gold */
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.ministry-card h3 {
+  margin-top: 0;
+  color: #145a32; /* Deep Green */
+}
