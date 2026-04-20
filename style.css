@@ -442,4 +442,15 @@ footer {
   background: #e8e8e8;
 }
 
+/* LOGO + TITLE */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.church-logo {
+  height: 60px;
+  width: auto;
+}
 
