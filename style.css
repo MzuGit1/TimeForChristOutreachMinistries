@@ -179,6 +179,9 @@ footer {
   .info-card {
     width: 100%;
   }
+   .church-logo {
+    height: 45px;
+  }
 }
 
 /* LEADERSHIP PAGE CARDS */
