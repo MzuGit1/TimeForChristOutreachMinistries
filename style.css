@@ -128,12 +128,12 @@ footer {
 .info-card {
   background: white;
   border-left: 6px solid #f1c40f; /* Gold accent */
-  padding: 25px 25px;
+  padding: 20px 20px;
   width: 30%;
   min-width: 250px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   border-radius: 5px;
-  line-height: 1.0;   /* Better text spacing */
+  line-height: 1.2;   /* Better text spacing */
   font-size: 14px;    /* Slightly larger text */
 }
 
