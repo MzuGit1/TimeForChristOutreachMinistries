@@ -191,6 +191,9 @@ footer {
    .church-logo {
     height: 45px;
   }
+  .card-row {
+    flex-direction: column;
+  }
 }
 
 /* LEADERSHIP PAGE CARDS */
