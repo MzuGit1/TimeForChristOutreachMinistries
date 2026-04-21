@@ -495,6 +495,7 @@ footer {
   max-width: 1200px;   /* keeps layout stable on desktop */
   margin-left: auto;
   margin-right: auto;  /* centers the whole section */
+  overflow: hidden; /* prevents mobile overflow */
 }
 
 
