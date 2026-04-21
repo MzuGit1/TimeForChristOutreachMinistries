@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Sermons – Time For Christ Outreach Ministries</title>
-  <link rel="stylesheet" href="style.css?v=12">
-</head>
+---
+layout: default
+title: Home
+---
 
-<body>
-
-  <!-- TOP NAVIGATION -->
-  {% include header.html %}
-  
-  <div class="layout-container">
-
-    <!-- LEFT SIDEBAR -->
-    {% include sidebar.html %}
-
-    <!-- MAIN CONTENT AREA -->
-    <main class="content-area">
 
       <h2>Sermons</h2>
       <p>Watch sermons, teachings, and messages from Time For Christ Outreach Ministries.</p>
@@ -51,14 +36,7 @@
         </div>
       </section>
 
-    </main>
-
-  </div>
-
-  <footer>
-    <p>© 2026 Time For Christ Outreach Ministries</p>
-  </footer>
-
+    
   <script>
     function loadSermon(url, title, description) {
       document.getElementById("mainVideo").src = url;
@@ -67,6 +45,5 @@
     }
   </script>
 
-</body>
-</html>
+
 
