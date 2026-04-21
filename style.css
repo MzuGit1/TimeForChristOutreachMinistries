@@ -201,6 +201,7 @@ footer {
   }
 .card-section {
   flex-wrap: wrap;
+  justify-content: center;
 }
 }
 
