@@ -482,5 +482,12 @@ footer {
   flex-wrap: nowrap; /* This is the key fix */
   margin-top: 30px;
 }
+.card-section {
+  background: #f7f9f8; /* soft light grey-green */
+  padding: 50px 20px;  /* space around the cards */
+  border-radius: 12px; /* smooth rounded edges */
+  margin-top: 40px;
+}
+
 
 
