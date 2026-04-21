@@ -17,12 +17,19 @@ nav a {
   text-decoration: none;
 }
 
-.hero {
-  background: #145a32;
+.hero-header {
+  background-image: url('T4CHeroBanner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
   color: white;
-  padding: 60px 20px;
-  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 
 .content {
   padding: 20px;
