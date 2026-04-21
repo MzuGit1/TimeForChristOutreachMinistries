@@ -123,6 +123,7 @@ footer {
   gap: 20px;
   margin-top: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .info-card {
@@ -147,7 +148,7 @@ footer {
   border-radius: 5px;
   line-height: 1.2;   /* Better text spacing */
   font-size: 14px;    /* Slightly larger text */
-  justify-content: center;
+  
 }
 
 .info-card h3 {
