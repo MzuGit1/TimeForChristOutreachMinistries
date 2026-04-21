@@ -478,14 +478,6 @@ footer {
   width: auto;
 }
 
-.card-row {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: nowrap; /* This is the key fix */
-  margin-top: 30px;
-}
 .card-section {
   background: #DCDCDC; /* soft light grey-green #f7f9f8 */
   padding: 50px 20px;  /* space around the cards */
@@ -496,6 +488,14 @@ footer {
   margin-left: auto;
   margin-right: auto;  /* centers the whole section */
   overflow: hidden; /* prevents mobile overflow */
+}
+.card-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap; /* This is the key fix */
+  margin-top: 30px;
 }
 
 
