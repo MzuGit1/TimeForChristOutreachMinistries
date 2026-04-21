@@ -181,6 +181,7 @@ footer {
   .sidebar {
     width: 100%;
     text-align: center;
+    flex-wrap: nowrap;
   }
 
   .sidebar a {
