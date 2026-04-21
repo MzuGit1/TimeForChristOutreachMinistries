@@ -196,6 +196,7 @@ footer {
     height: 45px;
   }
  .card-row {
+    flex-wrap: wrap;
     justify-content: center;
   }
 }
@@ -478,7 +479,7 @@ footer {
   gap: 20px;
   justify-content: center;
   align-items: stretch;
-  flex-wrap: wrap; /* This is the key fix */
+  flex-wrap: nowrap; /* This is the key fix */
   margin-top: 30px;
 }
 
