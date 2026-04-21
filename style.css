@@ -206,9 +206,14 @@ footer {
    .church-logo {
     height: 45px;
   }
-  .card-row {
-    flex-direction: column;
-  }
+ .card-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap; /* This is the key fix */
+  margin-top: 30px;
+}
 }
 
 /* LEADERSHIP PAGE CARDS */
