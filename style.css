@@ -465,4 +465,12 @@ footer {
   height: 60px;
   width: auto;
 }
+.card-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch; /* Makes all cards equal height */
+  margin-top: 30px;
+}
+
 
