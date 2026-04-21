@@ -199,6 +199,9 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
   }
+.card-section {
+  flex-wrap: wrap;
+}
 }
 
 /* LEADERSHIP PAGE CARDS */
