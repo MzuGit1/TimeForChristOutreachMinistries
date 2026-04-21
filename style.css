@@ -491,7 +491,7 @@ footer {
   padding: 50px 20px;  /* space around the cards */
   border-radius: 12px; /* smooth rounded edges */
   margin-top: 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
-
 
 
