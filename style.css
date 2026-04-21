@@ -492,6 +492,9 @@ footer {
   border-radius: 12px; /* smooth rounded edges */
   margin-top: 40px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  max-width: 1200px;   /* keeps layout stable on desktop */
+  margin-left: auto;
+  margin-right: auto;  /* centers the whole section */
 }
 
 
