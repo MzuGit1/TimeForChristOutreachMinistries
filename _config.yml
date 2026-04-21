@@ -1,4 +1,62 @@
-title: Time For Christ Outreach Ministries
+# ================================
+#   SITE INFORMATION
+# ================================
+title: "Time For Christ Outreach Ministries"
+description: "A Christ-centered ministry dedicated to preaching the Gospel, empowering communities, and transforming lives through the Word of God."
+url: "https://mzugit1.github.io/TimeForChristOutreachMinistries"
+author: "Time For Christ Outreach Ministries"
+
+# ================================
+#   BUILD SETTINGS
+# ================================
 markdown: kramdown
 theme: minima
 plugins: []
+
+# ================================
+#   JEKYLL DIRECTORIES
+# ================================
+includes_dir: _includes
+layouts_dir: _layouts
+
+# ================================
+#   SEO SETTINGS
+# ================================
+seo:
+  name: "Time For Christ Outreach Ministries"
+  type: "Organization"
+  description: "A ministry committed to spreading the Gospel, serving communities, and raising disciples."
+  twitter:
+    username: ""
+  facebook:
+    publisher: ""
+  image: "/T4CHeroBanner.png"
+
+# ================================
+#   SOCIAL MEDIA (OPTIONAL)
+# ================================
+social_links:
+  facebook: ""
+  youtube: ""
+  instagram: ""
+  tiktok: ""
+
+# ================================
+#   PERMALINKS
+# ================================
+permalink: pretty
+
+# ================================
+#   EXCLUDE FILES FROM BUILD
+# ================================
+exclude:
+  - README.md
+  - script.js
+  - "*.psd"
+  - "*.xcf"
+
+# ================================
+#   FUTURE-PROOF SETTINGS
+# ================================
+future: true
+timezone: Africa/Johannesburg
