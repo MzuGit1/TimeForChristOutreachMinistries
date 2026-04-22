@@ -525,6 +525,18 @@ footer {
   object-fit: cover;
   display: block;
 }
+@media (max-width: 768px) {
+  .welcome-header {
+    height: auto !important;
+  }
+
+  .welcome-header img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
 
 
 
