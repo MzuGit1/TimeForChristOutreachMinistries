@@ -201,14 +201,13 @@ footer {
     grid-template-columns: 1fr !important;
   }
 
-  .welcome-header {
-    height: auto; /* let the image decide height */
+ .welcome-header {
+    height: 180px; /* or 200px */
   }
 
   .welcome-header img {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* show full image */
+    object-fit: cover;
+    object-position: center top; /* or center center */
   }
 
 .card-section {
