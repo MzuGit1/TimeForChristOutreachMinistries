@@ -512,19 +512,23 @@ footer {
   border-radius: 12px; /* matches the card corners */
 }
 
+/* DESKTOP */
 .welcome-header {
   padding: 0;
   width: 100%;
-  height: 200px; /* adjust this */
+  height: 200px;
   overflow: hidden;
   margin-bottom: 20px;
 }
+
 .welcome-header img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
+/* MOBILE FIX */
 @media (max-width: 768px) {
   .welcome-header {
     height: auto !important;
@@ -536,6 +540,7 @@ footer {
     object-fit: contain !important;
   }
 }
+
 
 
 
