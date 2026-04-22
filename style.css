@@ -203,8 +203,8 @@ footer {
 
 
 .card-section {
-  flex-wrap: wrap;
-  justify-content: vertical;
+  display: grid;
+  justify-content: center;
 }
 }
 
