@@ -512,13 +512,6 @@ footer {
   border-radius: 12px; /* matches the card corners */
 }
 
-.welcome-header {
-  width: 100%;
-  height: 300px; /* adjust this height */
-  overflow: hidden;
-  margin-bottom: 15px; /* small spacing before card section */
-}
-
 
 
 
