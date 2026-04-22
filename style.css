@@ -489,7 +489,7 @@ footer {
   background: #DCDCDC; /* soft light grey-green #f7f9f8 */
   padding: 50px 20px;  /* space around the cards */
   border-radius: 12px; /* smooth rounded edges */
-  margin-top: 40px;
+  margin-top: 20px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
   max-width: 1200px;   /* keeps layout stable on desktop */
   margin-left: auto;
@@ -513,10 +513,17 @@ footer {
 }
 
 .welcome-header {
+  padding: 0;
   width: 100%;
-  height: 300px; /* adjust this height */
+  height: 250px; /* adjust this */
   overflow: hidden;
-  margin-bottom: 15px; /* small spacing before card section */
+  margin-bottom: 20px;
+}
+.welcome-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 
