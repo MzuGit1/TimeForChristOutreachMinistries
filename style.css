@@ -514,18 +514,12 @@ footer {
 
 .welcome-header {
   width: 100%;
-  height: 300px; /* adjust to your preferred banner height */
+  height: 200px; /* adjust to your preferred banner height */
   overflow: hidden;
   border-radius: 12px;
   margin-bottom: 30px;
 }
 
-.welcome-header img {
-  width: 100%;
-  height: 70%;
-  object-fit: cover; /* fills the section without distortion */
-  display: block;
-}
 
 
 
