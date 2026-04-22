@@ -206,11 +206,6 @@ footer {
    height: auto;
   }
 
-  .welcome-header img {
-    object-fit: cover;
-    object-position: center top; /* or center center */
-  }
-
 .card-section {
   display: grid;
   justify-content: center;
