@@ -521,8 +521,8 @@ footer {
 }
 
 .welcome-header img {
-  width: 70%;
-  height: 90%;
+  width: 80%;
+  height: 70%;
   object-fit: cover; /* fills the section without distortion */
   display: block;
 }
