@@ -500,6 +500,14 @@ footer {
   box-sizing: border-box !important;
 }
 
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+
 
 
 
