@@ -202,7 +202,8 @@ footer {
   }
 
  .welcome-header {
-    height: 260px;
+   width: 100%;
+   height: auto;
   }
 
   .welcome-header img {
