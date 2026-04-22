@@ -513,31 +513,16 @@ footer {
 }
 
 /* DESKTOP */
-.welcome-header {
+.calling {
   padding: 0;
-  width: 100%;
-  height: 200px; /* desktop height */
-  overflow: hidden;
-  margin-bottom: 20px;
+  color: gold
 }
 
-.welcome-header img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .welcome-header {
+  .calling {
     height: auto !important; /* allow full image */
-  }
-
-  .welcome-header img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important; /* prevent side cropping */
   }
 }
 
