@@ -1,0 +1,19 @@
+<form action="/upload/document" method="post" enctype="multipart/form-data">
+    <label>Name:</label>
+    <input type="text" name="name" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Document Type:</label>
+    <select name="doctype">
+        <option>ID Copy</option>
+        <option>Proof of Address</option>
+        <option>Membership Form</option>
+    </select>
+
+    <label>Upload File:</label>
+    <input type="file" name="file" required>
+
+    <button type="submit">Upload</button>
+</form>
