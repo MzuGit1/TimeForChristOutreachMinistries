@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T4C Portal – Login</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body class="portal-body">
+<div class="portal-card">
+    <h1 class="portal-title">T4C Member Portal</h1>
+    <h2 class="portal-subtitle">Sign in</h2>
+
+    <div class="portal-field">
+        <label>Username</label>
+        <input type="text" id="username" />
+    </div>
+
+    <div class="portal-field">
+        <label>Password</label>
+        <input type="password" id="password" />
+    </div>
+
+    <button id="loginBtn" class="portal-button">Login</button>
+
+    <p id="error" class="portal-error"></p>
+</div>
+
+<script src="shared.js"></script>
+<script>
+document.getElementById("loginBtn").addEventListener("click", async () => {
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const errorEl = document.getElementById("error");
+    errorEl.textContent = "";
+
+    if (!username || !password) {
+        errorEl.textContent = "Please enter username and password.";
+        return;
+    }
+
+    try {
+        const result = await login(username, password);
+        const role = result.role;
+
+        if (role === "Admin") {
+            window.location.href = "admin-dashboard.html";
+        } else {
+            window.location.href = "member-dashboard.html";
+        }
+    } catch (e) {
+        errorEl.textContent = e.message;
+    }
+});
+</script>
+</body>
+</html>
