@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T4C Portal – Admin</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body class="portal-body">
+<div class="portal-topbar">
+    <div class="portal-topbar-left">
+        <span class="portal-logo">T4C Portal</span>
+        <span class="portal-tag portal-tag-admin">Admin</span>
+    </div>
+    <button onclick="logout()" class="portal-topbar-button">Logout</button>
+</div>
+
+<div class="portal-main">
+    <section class="portal-section">
+        <h2>All Files</h2>
+        <table class="portal-table">
+            <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Uploaded By</th>
+                <th>Uploaded At</th>
+                <th>Size (KB)</th>
+                <th>Download</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody id="filesBody"></tbody>
+        </table>
+        <p id="filesMsg" class="portal-info"></p>
+    </section>
+</div>
+
+<script src="shared.js"></script>
+<script>
+requireAuth(["Admin"]);
+
+async function loadAllFiles() {
+    const body = document.getElementById("filesBody");
+    const msg = document.getElementById("filesMsg");
+    body.innerHTML = "";
+    msg.textContent = "Loading...";
+
+    try {
+        const files = await fetchAllFiles();
+        msg.textContent = files.length === 0 ? "No files found." : "";
+
+        files.forEach(f => {
+            const tr = document.createElement("tr");
+
+            const nameTd = document.createElement("td");
+            nameTd.textContent = f.originalFileName;
+
+            const userTd = document.createElement("td");
+            userTd.textContent = f.uploadedBy;
+
+            const dateTd = document.createElement("td");
+            dateTd.textContent = new Date(f.uploadedAt).toLocaleString();
+
+            const sizeTd = document.createElement("td");
+            sizeTd.textContent = (f.size / 1024).toFixed(1);
+
+            const dlTd = document.createElement("td");
+            const dlLink = document.createElement("a");
+            dlLink.textContent = "Download";
+            dlLink.href = `${API_BASE}/api/files/download/${f.id}`;
+            dlLink.target = "_blank";
+            dlLink.rel = "noopener";
+            dlLink.onclick = (e) => {
+                e.preventDefault();
+                window.open(dlLink.href + `?token=${getToken()}`, "_blank");
+            };
+            dlTd.appendChild(dlLink);
+
+            const delTd = document.createElement("td");
+            const delBtn = document.createElement("button");
+            delBtn.textContent = "Delete";
+            delBtn.className = "portal-danger-button";
+            delBtn.onclick = async () => {
+                if (!confirm("Delete this file?")) return;
+                try {
+                    await deleteFile(f.id);
+                    await loadAllFiles();
+                } catch {
+                    alert("Delete failed.");
+                }
+            };
+            delTd.appendChild(delBtn);
+
+            tr.appendChild(nameTd);
+            tr.appendChild(userTd);
+            tr.appendChild(dateTd);
+            tr.appendChild(sizeTd);
+            tr.appendChild(dlTd);
+            tr.appendChild(delTd);
+
+            body.appendChild(tr);
+        });
+    } catch (e) {
+        msg.textContent = "Failed to load files.";
+    }
+}
+
+loadAllFiles();
+</script>
+</body>
+</html>
