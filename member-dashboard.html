@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T4C Portal – My Files</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body class="portal-body">
+<div class="portal-topbar">
+    <div class="portal-topbar-left">
+        <span class="portal-logo">T4C Portal</span>
+        <span class="portal-tag">Member</span>
+    </div>
+    <button onclick="logout()" class="portal-topbar-button">Logout</button>
+</div>
+
+<div class="portal-main">
+    <section class="portal-section">
+        <h2>Upload Document</h2>
+        <input type="file" id="fileInput" />
+        <button id="uploadBtn" class="portal-button">Upload</button>
+        <p id="uploadMsg" class="portal-info"></p>
+    </section>
+
+    <section class="portal-section">
+        <h2>My Files</h2>
+        <table class="portal-table">
+            <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Uploaded At</th>
+                <th>Size (KB)</th>
+                <th>Download</th>
+            </tr>
+            </thead>
+            <tbody id="filesBody"></tbody>
+        </table>
+        <p id="filesMsg" class="portal-info"></p>
+    </section>
+</div>
+
+<script src="shared.js"></script>
+<script>
+requireAuth(["Member", "Admin"]);
+
+async function loadMyFiles() {
+    const body = document.getElementById("filesBody");
+    const msg = document.getElementById("filesMsg");
+    body.innerHTML = "";
+    msg.textContent = "Loading...";
+
+    try {
+        const files = await fetchMyFiles();
+        msg.textContent = files.length === 0 ? "No files uploaded yet." : "";
+
+        files.forEach(f => {
+            const tr = document.createElement("tr");
+
+            const nameTd = document.createElement("td");
+            nameTd.textContent = f.originalFileName;
+
+            const dateTd = document.createElement("td");
+            dateTd.textContent = new Date(f.uploadedAt).toLocaleString();
+
+            const sizeTd = document.createElement("td");
+            sizeTd.textContent = (f.size / 1024).toFixed(1);
+
+            const dlTd = document.createElement("td");
+            const dlLink = document.createElement("a");
+            dlLink.textContent = "Download";
+            dlLink.href = `${API_BASE}/api/files/download/${f.id}`;
+            dlLink.target = "_blank";
+            dlLink.rel = "noopener";
+            dlLink.onclick = (e) => {
+                e.preventDefault();
+                window.open(dlLink.href + `?token=${getToken()}`, "_blank");
+            };
+            dlTd.appendChild(dlLink);
+
+            tr.appendChild(nameTd);
+            tr.appendChild(dateTd);
+            tr.appendChild(sizeTd);
+            tr.appendChild(dlTd);
+
+            body.appendChild(tr);
+        });
+    } catch (e) {
+        msg.textContent = "Failed to load files.";
+    }
+}
+
+document.getElementById("uploadBtn").addEventListener("click", async () => {
+    const fileInput = document.getElementById("fileInput");
+    const msg = document.getElementById("uploadMsg");
+    msg.textContent = "";
+
+    if (!fileInput.files.length) {
+        msg.textContent = "Please choose a file.";
+        return;
+    }
+
+    try {
+        await uploadFile(fileInput.files[0]);
+        msg.textContent = "File uploaded successfully.";
+        fileInput.value = "";
+        await loadMyFiles();
+    } catch (e) {
+        msg.textContent = "Upload failed.";
+    }
+});
+
+loadMyFiles();
+</script>
+</body>
+</html>
