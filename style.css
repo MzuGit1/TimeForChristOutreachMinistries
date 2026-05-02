@@ -214,7 +214,7 @@ footer {
 
 /* LEADERSHIP PAGE CARDS */
 .leader-card {
-  background: white;
+  background: gold;
   padding: 20px;
   margin-bottom: 25px;
   border-left: 6px solid #145a32; /* Green */
@@ -224,7 +224,7 @@ footer {
 
 .leader-card h3 {
   margin-top: 0;
-  color: #145a32;
+  color: #F8F8FF;
 }
 
 .pastoralS-card {
@@ -238,7 +238,7 @@ footer {
 
 .pastoralS-card h3 {
   margin-top: 0;
-  color: #145a32;
+  color: #F8F8FF;
 }
 
 .pastoralSl-card {
@@ -252,7 +252,7 @@ footer {
 
 .pastoralSl-card h3 {
   margin-top: 0;
-  color: #145a32;
+  color: #F8F8FF;
 }
 
 .pastoralP-card {
@@ -266,7 +266,7 @@ footer {
 
 .pastoralP-card h3 {
   margin-top: 0;
-  color: #145a32;
+  color: #F8F8FF;
 }
 
 /* YEAR PLAN CARDS */
