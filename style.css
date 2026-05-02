@@ -227,7 +227,7 @@ footer {
   color: #145a32;
 }
 
-.pastoral-card {
+.pastoralS-card {
   background: white;
   padding: 20px;
   margin-bottom: 25px;
@@ -236,7 +236,21 @@ footer {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.pastoral-card h3 {
+.pastoralS-card h3 {
+  margin-top: 0;
+  color: #145a32;
+}
+
+.pastoralSl-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 6px solid #145a32; /* Green */
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.pastoralSl-card h3 {
   margin-top: 0;
   color: #145a32;
 }
