@@ -8,6 +8,13 @@ title: Home
 
       
       <!-- LEADERSHIP STRUCTURE -->
+   <div class="tab-buttons">
+        <button class="active" onclick="openTab('Church_Board')">Church Board</button>
+        <button onclick="openTab('Swaneville_Branch')">Swaneville Branch</button>
+        <button onclick="openTab('Slovoville_Branch')">Slovoville Branch</button>
+        <button onclick="openTab('Polas_Branch')">Polas Branch</button>
+    </div>
+   <div id="Church_Board" class="tab-content active">
       <section class="leader-card">
         <table border="1">
               <tr>
@@ -65,6 +72,8 @@ title: Home
               </tr>
         </table>
       </section>
+</div>
+<div id="Swaneville_Branch" class="tab-content active">
      <section class="pastoralS-card">
       <h3>Pastoral Team Swaneville Branch</h3>
          <table border="1">
@@ -103,7 +112,8 @@ title: Home
               </tr>
         </table>
       </section>
-
+</div>
+<div id="Slovoville_Branch" class="tab-content active">
      <section class="pastoralSl-card">
       <h3>Pastoral Team Solovoville Branch</h3>
          <table border="1">
@@ -147,6 +157,8 @@ title: Home
               
         </table>
       </section>
+</div>
+<div id="Polas_Branch" class="tab-content active">
        <section class="pastoralP-card">
       <h3>Pastoral Team Polas(Informal Settlement) Branch</h3>
          <table border="1">
@@ -173,6 +185,23 @@ title: Home
               </tr>
         </table>
       </section>
+</div>
+
+<script>
+    function openTab(tabId) {
+        // Hide all tabs
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+
+        // Remove active class from all buttons
+        document.querySelectorAll('.tab-buttons button').forEach(btn => btn.classList.remove('active'));
+
+        // Show selected tab
+        document.getElementById(tabId).classList.add('active');
+
+        // Highlight the clicked button
+        event.target.classList.add('active');
+    }
+</script>
       
 
    
